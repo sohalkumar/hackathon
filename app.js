@@ -5,6 +5,9 @@ const UserDetail = require("./Schemas/login")
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.json());
+
 
 mongoose.connect("mongodb://127.0.0.1:27017/user-login")
 .then(app.listen(process.env.PORT || 3000, (req, res) => {
@@ -16,21 +19,19 @@ mongoose.connect("mongodb://127.0.0.1:27017/user-login")
 )
 
 app.get("/login", (req, res) => {
-    res.sendFile(__dirname + "/login.html")
+    res.sendFile(__dirname + "/public/html/login.html")
 })
 
 app.post("/login", (req, res) => {
-    console.log(req.body);
     let userEmail = req.body.email
     let userPass = req.body.password
     UserDetail.find({ email: userEmail }, (err, data) => {
-        console.log(data.length == 0);
         if (data.length == 0) {
-            res.sendFile(__dirname + "/loginfailure.html")
+            res.sendFile(__dirname + "/public/html/loginfailure.html")
         }
         else if (data[0].email == userEmail
             && data[0].password == userPass) {
-            res.send("<h1>Success</h1>")
+            res.sendFile(__dirname + "/public/html/index.html")
         } else if (data[0].password != userPass) {
             res.redirect("/login")
         }
@@ -38,20 +39,23 @@ app.post("/login", (req, res) => {
 })
 
 app.get("/register", (req, res) => {
-    res.sendFile(__dirname + "/register.html")
+    res.sendFile(__dirname + "/public/html/register.html")
 })
 
 app.post("/register", (req, res) => {
     UserDetail.find({email: req.body.email}, (err, data) => {
         if (data.length != 0) {
-            res.sendFile(__dirname + "/registerfailure.html")
+            res.sendFile(__dirname + "/public/html/registerfailure.html")
         } else {
             let details = new UserDetail({
                 email: req.body.email,
                 password: req.body.password
             })
             details.save()
-            res.send("<h1>Success</h1>")
+            res.sendFile(__dirname + "/public/html/index.html")
         }
     })
 })
+
+
+
