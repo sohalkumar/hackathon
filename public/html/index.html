@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>health care</title>
+    <title>CareMap</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- adding favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/style.css">
-
+    
 </head>
 
 <body>
@@ -29,144 +31,53 @@
             <a href="#home">home</a>
             <a href="#services">services</a>
             <a href="#about">about</a>
-            <a href="#doctors">doctors</a>
             <a href="#book">book</a>
-            <a href="#review">review</a>
+            <a href="login.html">login</a>
+            <a href="register.html">register</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
     </header>
 
-    <!-- header section ends -->
-
-
-
-    <!-- search bar ends -->
-    <!-- home section starts  -->
-
     <section class="home" id="home">
 
         <div class="image">
-            <img src="../image/home-img.svg" alt="">
+            <img src="../image/home-img.svg" alt="">    
         </div>
 
         <div class="content">
-            <h3>Extending The point of care everywhere</h3>
-            <p>Much like a GPS helps a driver navigate their every turn during a long journey.</p>
-            <a href="#" class="btn">Join Now <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
+            <h3>Looking for the treatment?</h3>
+            <p>Search for doctors near you!!</p><br><br>
+            <div action="/search" method ="post" class="container">
+                <div class="row height d-flex justify-content-center align-items-center">
+                  <div class="col-md-8">
+                    <div class="search">
+                      <i class="fa fa-search"></i>
+                      <input type="text" class="form-control" placeholder="Enter your disease" ><br><br>
+                      <input type="text" class="form-control" placeholder="Enter your state/city"><br><br>
+                      <button class="btn btn-primary"><a href="disease.html">Search</a></button>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+            </div>
+<!--
+            <div class="input-group">
+                <form action="/search" method=post>
+                    <input type="text" class="form-control rounded" name = "disease" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <br><br>
+                    <input type="text" class="form-control rounded" name = "location"  placeholder="Location" aria-label="Search" aria-describedby="search-addon" />
+                    <br><br>
+                    <button class="btn btn-primary">Search </button>
+                </form>
+            </div>
+        -->
     </section>
 
-    <!-- home section ends -->
-
-    <!-- search bar starts -->
-    <ul class="nav">
-        <li id="settings">
-            <!-- <a href="#"><img src="settings.png" /></a> -->
-        </li>
-        <li id="options">
-            <a href="#">Delhi</a>
-            <ul class="subnav">
-                <li><a href="#">seelampur</a></li>
-                <li><a href="#">dwarka</a></li>
-                <li><a href="#">narayna</a></li>
-                <li><a href="#">yamuna bank</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Mumbai</a>
-            <ul class="subnav">
-                <li><a href="#"></a></li>
-                <li><a href="#">bandra</a></li>
-                <li><a href="#">nala supara</a></li>
-                <li><a href="#">navi mumbai</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Bangalore</a>
-            <ul class="subnav">
-                <li><a href="#">indra park</a></li>
-                <li><a href="#">raj nagar</a></li>
-                <li><a href="#">jayanagar</a></li>
-                <li><a href="#">kormangala</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Bihar</a>
-            <ul class="subnav">
-                <li><a href="#">kabul nagar</a></li>
-                <li><a href="#">krishna vihar</a></li>
-                <li><a href="#">gangadham</a></li>
-                <li><a href="#">jhumrinagar</a></li>
-            </ul>
-        <li id="options">
-            <a href="#">Punjab</a>
-            <ul class="subnav">
-                <li><a href="#">jalandhar</a></li>
-                <li><a href="#">khekra</a></li>
-                <li><a href="#">asharam nagar</a></li>
-                <li><a href="#">lpu</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Haryana</a>
-            <ul class="subnav">
-                <li><a href="#">rohtak</a></li>
-                <li><a href="#">sonipat</a></li>
-                <li><a href="#">panipat</a></li>
-                <li><a href="#">kurukshetra</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Uttar pradesh</a>
-            <ul class="subnav">
-                <li><a href="#">meerut</a></li>
-                <li><a href="#">mourredabad</a></li>
-                <li><a href="#">ghaziabad</a></li>
-                <li><a href="#">noida</a></li>
-            </ul>
-        </li>
-        <li id="options">
-            <a href="#">Rajasthan</a>
-            <ul class="subnav">
-                <li><a href="#">kota</a></li>
-                <li><a href="#">jaipur</a></li>
-                <li><a href="#">ganagnagar</a></li>
-                <li><a href="#">ajmer</a></li>
-            </ul>
-        </li>
-        <!-- <li id="options">
-        <a href="#">n</a>
-       <ul class="subnav">
-           <li><a href="#">Settings</a></li>
-           <li><a href="#">Application</a></li>
-           <li><a href="#">Board</a></li>
-           <li><a href="#">Options</a></li>
-       </ul>
-   </li> -->
-        </li>
-        <li id="search">
-            <form action="" method="get">
-                <input type="text" name="search_text" id="search_text" placeholder="Search" />
-                <input type="button" name="search_button" id="search_button"></a>
-            </form>
-        </li>
-    </ul>
-
-    <script src="prefixfree-1.0.7.js" type="text/javascript"></script>
-
-
-
-    <!-- search bar ends -->
-
-
-
-
-
     <!-- booking section starts   -->
-
+ <!--
     <section class="book" id="book">
 
         <h1 class="heading">Search healthcare near you</h1>
@@ -177,12 +88,12 @@
                 <img src="../image/book-img.svg" alt="">
             </div>
 
-            <form action="">
+            <form action="/search" method=post>
                 <h3>Help desk</h3>
-                <input type="text" placeholder="your Location" class="box">
+                <input type="text" name = "disease" placeholder="your Location" class="box">
                 <input type="number" placeholder="you are suffering from" class="box">
                 <input type="email" placeholder="your age" class="box">
-                <!-- <input type="date" class="box"> -->
+                 <input type="date" class="box"> 
                 <input type="submit" value="search" class="btn">
             </form>
 
@@ -190,9 +101,8 @@
 
     </section>
 
-    <!-- booking section ends -->
-    <!-- icons section starts  -->
-
+    booking section ends 
+   
     <section class="icons-container">
 
         <div class="icons">
@@ -223,13 +133,13 @@
             <h3>200+</h3>
             <p>Blood banks</p>
         </div>
-        <!-- <div class="icons">
+        <div class="icons">
         <i class="fas fa-users"></i>
         <h3>350+</h3>
         <p>Diagnosis centre</p>
-    </div> -->
+    </div> 
 
-    </section>
+    </section> -->
 
     <!-- icons section ends -->
     <!-- <div class="container">
@@ -256,55 +166,42 @@
             <div class="box">
                 <i class="fas fa-notes-medical"></i>
                 <h3>hospitals</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Looking for the hospitals near you?</p>
+                <a href="hospital.html" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
                 <i class="fas fa-ambulance"></i>
                 <h3>clinics near you</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Looking for the clinics near you?</p>
+                <a href="clinic.html" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
                 <i class="fas fa-user-md"></i>
                 <h3>Radiology Centres</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Find Radiology centres near you</p>
+                <a href="radiology.html" class="btn">Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
                 <i class="fas fa-pills"></i>
                 <h3>Blood Banks</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Looking for blood banks to donate blood?</p>
+                <a href="bloodbank.html" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
 
             <div class="box">
                 <i class="fas fa-procedures"></i>
                 <h3>surgical centres</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-heartbeat"></i>
-                <h3>Good Customer support</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-            </div>
-            <div class="box">
-                <i class="fas fa-user-md"></i>
-                <h3>Diagnosis centre</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Find surgical centres near you</p>
+                <a href="surgical.html" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
             <div class="box">
                 <i class="fas fa-user-md"></i>
                 <h3>Pharmacies</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>Pharmacies near you</p>
+                <a href="pharmacies.html" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
 
 
@@ -326,14 +223,11 @@
                 <img src="../image/about-img.svg" alt="">
             </div>
 
-            <div class="content">
-                <h3>we take care of your healthy life</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in
-                    assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.
-                </p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates
-                    voluptatibus a nihil temporibus deserunt vel?</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            <div class="content"><br>
+                <h3>We make your treatment convinent</h3>
+                <p>If you are someone who's confused where to consult for the treatment, or you are looking for the treatment
+                    of disease near you... We have the solution for you!!
+                </p><br>
             </div>
 
         </div>
@@ -352,7 +246,7 @@
 
     <section class="blogs" id="blogs">
 
-        <h1 class="heading"> our <span>partners</span> </h1>
+        <h1 class="heading"> our <span>doctors</span> </h1>
 
         <div class="box-container">
 
@@ -362,12 +256,12 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 1</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                    <h3>Dr. Smita Nandi</h3>
+                    <p>Paediatric Surgeon, MS, Mch</p>
+                    <p>Having an Experience of 17+ years</p>
+                    <a href="#" class="btn"> know more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
 
@@ -377,12 +271,13 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                        
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 2</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                    <h3>Dr. Nizar Lalani</h3>
+                    <p>Surgeon, Cardiologist</p>
+                     <p>Experience of 19+ years</p>
+                    <a href="#" class="btn"> know more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
 
@@ -392,11 +287,11 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 3</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                    <h3>Dr Somnath Gupta</h3>
+                    <p>M.Sc- Anatomy </p>
+                    <p>Having an Experienceof 15+ years</p>
                     <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
@@ -417,7 +312,7 @@
 
             <div class="box">
                 <img src="../image/pic-1.png" alt="">
-                <h3>john deo</h3>
+                <h3>Kamlesh Dutta</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -425,14 +320,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
-            </div>
+                <p class="text">It is one of the most convenient healthcare app that provides a quick connection process between patient and practitioner. Provides a good user experience.</p>            </div>
 
             <div class="box">
                 <img src="../image/pic-2.png" alt="">
-                <h3>john deo</h3>
+                <h3>Riya</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -440,14 +332,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
+                <p class="text">The filtering option is great! Allows you to select a treatment according to your preference and expenses</p>
             </div>
 
             <div class="box">
                 <img src="../image/pic-3.png" alt="">
-                <h3>john deo</h3>
+                <h3>Raina Sharma</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -455,17 +345,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
+                <p class="text">Provides the right support without letting the patients worry about the treatments </p>
             </div>
 
         </div>
 
     </section>
-
-    <!-- review section ends -->
-
     <!-- footer section starts  -->
 
     <section class="footer">
@@ -477,63 +362,39 @@
                 <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
                 <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
                 <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
-                <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
                 <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
                 <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
-                <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
             </div>
 
             <div class="box">
                 <h3>our services</h3>
                 <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
-                <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
-                <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
-                <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> blood banks </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Clinics near you </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> Hospitals </a>
                 <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
             </div>
 
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-                <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
-                <a href="#"> <i class="fas fa-envelope"></i> anasbhai@gmail.com </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +011-1234554 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> caremap@gmail.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> New Delhi, India </a>
             </div>
 
             <div class="box">
                 <h3>follow us</h3>
                 <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
                 <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
                 <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-                <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedIn </a>
             </div>
 
         </div>
 
-        <div class="credit"> created by <span>mr. web designer</span> | all rights reserved </div>
-
     </section>
 
     <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- custom js file link  -->
