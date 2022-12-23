@@ -38,13 +38,6 @@
 
     </header>
 
-    <!-- header section ends -->
-
-
-
-    <!-- search bar ends -->
-    <!-- home section starts  -->
-
     <section class="home" id="home">
 
         <div class="image">
@@ -54,12 +47,13 @@
         <div class="content">
             <h3>Looking for the treatment?</h3>
             <p>Search for doctors near you!!</p><br><br>
-            <div action="#" method ="get" class="container">
+            <div action="/search" method ="post" class="container">
                 <div class="row height d-flex justify-content-center align-items-center">
                   <div class="col-md-8">
                     <div class="search">
                       <i class="fa fa-search"></i>
-                      <input type="text" class="form-control" placeholder="Enter your disease">
+                      <input type="text" class="form-control" placeholder="Enter your disease" ><br><br>
+                      <input type="text" class="form-control" placeholder="Enter your location"><br><br>
                       <button class="btn btn-primary">Search</button>
                     </div>
                     
@@ -67,6 +61,17 @@
                   
                 </div>
             </div>
+<!--
+            <div class="input-group">
+                <form action="/search" method=post>
+                    <input type="text" class="form-control rounded" name = "disease" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <br><br>
+                    <input type="text" class="form-control rounded" name = "location"  placeholder="Location" aria-label="Search" aria-describedby="search-addon" />
+                    <br><br>
+                    <button class="btn btn-primary">Search </button>
+                </form>
+            </div>
+        -->
     </section>
 
     <!-- booking section starts   -->
@@ -81,9 +86,9 @@
                 <img src="../image/book-img.svg" alt="">
             </div>
 
-            <form action="">
+            <form action="/search" method=post>
                 <h3>Help desk</h3>
-                <input type="text" placeholder="your Location" class="box">
+                <input type="text" name = "disease" placeholder="your Location" class="box">
                 <input type="number" placeholder="you are suffering from" class="box">
                 <input type="email" placeholder="your age" class="box">
                  <input type="date" class="box"> 
@@ -187,13 +192,7 @@
             <div class="box">
                 <i class="fas fa-procedures"></i>
                 <h3>surgical centres</h3>
-                <p>Find surgical centres near you/p>
-                <a href="#" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
-            </div>
-            <div class="box">
-                <i class="fas fa-user-md"></i>
-                <h3>Diagnosis centre</h3>
-                <p>Diagnosis centre near you</p>
+                <p>Find surgical centres near you</p>
                 <a href="#" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>
             </div>
             <div class="box">
@@ -219,7 +218,7 @@
         <div class="row">
 
             <div class="image">
-                <!--<img src="../image/about-img.svg" alt="">-->
+                <img src="../image/about-img.svg" alt="">
             </div>
 
             <div class="content"><br>
@@ -227,20 +226,6 @@
                 <p>If you are someone who's confused where to consult for the treatment, or you are looking for the treatment
                     of disease near you... We have the solution for you!!
                 </p><br>
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      Link with href
-                    </a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                      Button with data-target
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                    </div>
-                  </div>
-               <!-- <a href="#" class="btn"> Explore <span class="fas fa-chevron-right"></span> </a>> -->
             </div>
 
         </div>
@@ -259,7 +244,7 @@
 
     <section class="blogs" id="blogs">
 
-        <h1 class="heading"> our <span>partners</span> </h1>
+        <h1 class="heading"> our <span>doctors</span> </h1>
 
         <div class="box-container">
 
@@ -269,12 +254,12 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 1</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                    <h3>Dr. Smita Nandi</h3>
+                    <p>Paediatric Surgeon, MS, Mch</p>
+                    <p>Having an Experience of 17+ years</p>
+                    <a href="#" class="btn"> know more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
 
@@ -284,12 +269,13 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                        
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 2</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
-                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                    <h3>Dr. Nizar Lalani</h3>
+                    <p>Surgeon, Cardiologist</p>
+                     <p>Experience of 19+ years</p>
+                    <a href="#" class="btn"> know more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
 
@@ -299,11 +285,11 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <h3>Hospital 3</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                    <h3>Dr Somnath Gupta</h3>
+                    <p>M.Sc- Anatomy </p>
+                    <p>Having an Experienceof 15+ years</p>
                     <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
                 </div>
             </div>
@@ -324,7 +310,7 @@
 
             <div class="box">
                 <img src="../image/pic-1.png" alt="">
-                <h3>john deo</h3>
+                <h3>Kamlesh Dutta</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -332,14 +318,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
-            </div>
+                <p class="text">It is one of the most convenient healthcare app that provides a quick connection process between patient and practitioner. Provides a good user experience.</p>            </div>
 
             <div class="box">
                 <img src="../image/pic-2.png" alt="">
-                <h3>john deo</h3>
+                <h3>Riya</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -347,14 +330,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
+                <p class="text">The filtering option is great! Allows you to select a treatment according to your preference and expenses</p>
             </div>
 
             <div class="box">
                 <img src="../image/pic-3.png" alt="">
-                <h3>john deo</h3>
+                <h3>Raina Sharma</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -362,17 +343,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil
-                    aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente
-                    minus voluptatem, reiciendis consequuntur optio dolorem!</p>
+                <p class="text">Provides the right support without letting the patients worry about the treatments </p>
             </div>
 
         </div>
 
     </section>
-
-    <!-- review section ends -->
-
     <!-- footer section starts  -->
 
     <section class="footer">

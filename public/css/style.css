@@ -79,8 +79,8 @@ section:nth-child(even){
 
 .search button{
     position: absolute;
-    top: -5px;
-    right: 5px;
+    top: 150px;
+    left: 250px;
     height: 50px;
     width: 100px;
     background: rgb(42, 43, 42);
@@ -741,4 +741,9 @@ section:nth-child(even){
     visibility: visible;
     top: 100%;
     opacity: 1;
+}
+
+::placeholder {
+    color: black;
+    opacity: 0.9;
 }
